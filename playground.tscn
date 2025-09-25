@@ -1,17 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://fgm3esrn35tx"]
+[gd_scene load_steps=2 format=3 uid="uid://fgm3esrn35tx"]
 
-[ext_resource type="Texture2D" uid="uid://20vqf4mcxmy1" path="res://Player/Sprites/ExamplePlayerSprite.png" id="1_rupst"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_edjgo"]
+[ext_resource type="PackedScene" uid="uid://c7kp2v8s4rsnf" path="res://Player/player.tscn" id="1_rupst"]
 
 [node name="Playground" type="Node2D"]
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-shape = SubResource("CircleShape2D_edjgo")
-
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
-position = Vector2(585, 282)
-texture = ExtResource("1_rupst")
-hframes = 21
+[node name="Player" parent="." instance=ExtResource("1_rupst")]
